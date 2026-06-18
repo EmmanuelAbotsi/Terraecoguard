@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>TerraEcoGuard | Premium Agrofertilizer Portfolio – Ghana</title>
+  <!-- Google Fonts + Font Awesome CDN -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #F9FCF7;
+      color: #1A2E1F;
+      scroll-behavior: smooth;
+      line-height: 1.5;
+    }
+
+    /* custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #E4EFDF;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #2F6B2F;
+      border-radius: 10px;
+    }
+
+    /* container utility */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* header & navigation */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 20px rgba(0, 20, 0, 0.05);
+      z-index: 1000;
+      padding: 18px 0;
+      transition: all 0.2s;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo h1 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #1F5E2D, #3E9F3E);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .logo span {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #4B7B4B;
+      display: block;
+      letter-spacing: 0.4px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      align-items: center;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #1E3A1E;
+      transition: 0.2s;
+      font-size: 1rem;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: #2D8C2D;
+    }
+    .btn-outline {
+      border: 2px solid #2D8C2D;
+      background: transparent;
+      padding: 8px 22px;
+      border-radius: 40px;
+      font-weight: 600;
+      color: #2D6A2D;
+      transition: 0.25s;
+    }
+    .btn-outline:hover {
+      background: #2D8C2D;
+      color: white;
+      border-color: #2D8C2D;
+    }
+
+    /* hero section */
+    .hero {
+      padding: 70px 0 80px;
+      background: linear-gradient(125deg, #F0F9EB 0%, #E2F0DA 100%);
+    }
+    .hero-grid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+      justify-content: space-between;
+    }
+    .hero-text {
+      flex: 1.2;
+    }
+    .hero-text .badge {
+      background: #D9F0D3;
+      color: #1B5E2A;
+      padding: 6px 16px;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 24px;
+    }
+    .hero-text h1 {
+      font-size: 3.3rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: #0F2F0F;
+      margin-bottom: 20px;
+    }
+    .hero-text p {
+      font-size: 1.1rem;
+      color: #2C4B2C;
+      max-width: 550px;
+      margin-bottom: 32px;
+    }
+    .btn-group {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: #236B2E;
+      padding: 12px 32px;
+      border-radius: 40px;
+      color: white;
+      font-weight: 700;
+      text-decoration: none;
+      transition: 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 5px 12px rgba(35, 107, 46, 0.25);
+    }
+    .btn-primary:hover {
+      background: #0F521F;
+      transform: translateY(-2px);
+    }
+    .btn-secondary {
+      background: transparent;
+      border: 2px solid #236B2E;
+      padding: 10px 30px;
+      border-radius: 40px;
+      font-weight: 700;
+      color: #236B2E;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .btn-secondary:hover {
+      background: #236B2E10;
+    }
+    .hero-image {
+      flex: 0.9;
+      text-align: center;
+    }
+    .hero-image img {
+      max-width: 100%;
+      border-radius: 36px;
+      box-shadow: 0 25px 35px -12px rgba(0,0,0,0.15);
+      object-fit: cover;
+      height: auto;
+      width: 100%;
+    }
+
+    /* section titles */
+    .section-title {
+      text-align: center;
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: #193A1E;
+      margin-bottom: 16px;
+    }
+    .section-sub {
+      text-align: center;
+      color: #537A4B;
+      max-width: 650px;
+      margin: 0 auto 56px;
+      font-size: 1.05rem;
+    }
+
+    /* product cards (fertilizer portfolio) */
+    .products {
+      padding: 80px 0;
+      background: #FFFFFF;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+      margin-top: 20px;
+    }
+    .product-card {
+      background: #FEFFFE;
+      border-radius: 32px;
+      padding: 32px 24px;
+      transition: all 0.25s ease;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.03), 0 2px 4px rgba(0,0,0,0.02);
+      border: 1px solid #E1F0DC;
+      text-align: center;
+    }
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 36px -12px rgba(35, 107, 46, 0.18);
+      border-color: #C0E0B6;
+    }
+    .product-icon {
+      font-size: 3rem;
+      color: #3A9B3A;
+      margin-bottom: 24px;
+    }
+    .product-card h3 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+    .product-desc {
+      color: #3F5A3A;
+      margin-bottom: 18px;
+      font-size: 0.95rem;
+    }
+    .nutrient-stats {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin: 20px 0 18px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #2D6E2D;
+    }
+    .product-tag {
+      background: #ECF9E6;
+      padding: 5px 12px;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      display: inline-block;
+    }
+
+    /* features / why us */
+    .features {
+      background: #F4FBF0;
+      padding: 80px 0;
+    }
+    .features-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+    }
+    .feature-item {
+      flex: 1;
+      min-width: 220px;
+      text-align: center;
+      background: white;
+      border-radius: 30px;
+      padding: 32px 20px;
+      transition: 0.2s;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.02);
+    }
+    .feature-item i {
+      font-size: 2.5rem;
+      background: #E1F2DA;
+      padding: 18px;
+      border-radius: 60px;
+      color: #236B2E;
+      margin-bottom: 20px;
+    }
+    .feature-item h4 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    /* stats / impact */
+    .impact {
+      padding: 70px 0;
+      background: #1F3D1C;
+      color: white;
+    }
+    .stats-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+      text-align: center;
+    }
+    .stat h2 {
+      font-size: 2.6rem;
+      font-weight: 800;
+    }
+    .stat p {
+      font-size: 1rem;
+      opacity: 0.85;
+    }
+
+    /* contact section */
+    .contact {
+      padding: 80px 0;
+      background: #FFFFFF;
+    }
+    .contact-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+      background: #F9FFF6;
+      border-radius: 48px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    }
+    .contact-left {
+      flex: 1;
+    }
+    .contact-left h3 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+    .contact-details i {
+      width: 32px;
+      color: #2C8C2C;
+    }
+    .contact-details p {
+      margin: 14px 0;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .contact-right {
+      flex: 1;
+    }
+    .form-group {
+      margin-bottom: 18px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 14px 18px;
+      border-radius: 28px;
+      border: 1px solid #C8E0BF;
+      background: white;
+      font-family: inherit;
+      outline: none;
+      transition: 0.2s;
+    }
+    input:focus, textarea:focus {
+      border-color: #2D8C2D;
+      box-shadow: 0 0 0 2px #b9e0ab;
+    }
+    .btn-submit {
+      background: #236B2E;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 40px;
+      color: white;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .btn-submit:hover {
+      background: #13501F;
+    }
+
+    footer {
+      background: #0E2612;
+      color: #C7E3BD;
+      padding: 40px 0 20px;
+    }
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+    .footer-logo h3 {
+      font-size: 1.7rem;
+      color: #DCF5D1;
+    }
+    .social i {
+      font-size: 1.5rem;
+      margin: 0 10px;
+      transition: 0.2s;
+      color: #BFE3B3;
+    }
+    .social i:hover {
+      color: white;
+    }
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #2C4F28;
+      padding-top: 24px;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 850px) {
+      .nav-container {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .hero-text h1 {
+        font-size: 2.5rem;
+      }
+      .container {
+        padding: 0 24px;
+      }
+      .contact-flex {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="container nav-container">
+    <div class="logo">
+      <h1>TerraEcoGuard</h1>
+      <span>sustainable agrofertilizer solutions</span>
+    </div>
+    <div class="nav-links">
+      <a href="#" class="active">Home</a>
+      <a href="#products">Fertilizers</a>
+      <a href="#features">Why Us</a>
+      <a href="#contact">Connect</a>
+      <a href="#" class="btn-outline">Get a Quote</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section with reliable Unsplash image -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <div class="badge"><i class="fas fa-leaf"></i> ECO-INNOVATION 2026</div>
+      <h1>Next-Gen Agrofertilizers <br> for Regenerative Yields</h1>
+      <p>Terra EcoGuard provides practical and sustainable solutions for turning organic waste into useful resources. Our services include organic waste management, soil remediation and land reclamation, soil health and fertility management, agroforestry support, and prevention of harmful gas emissions from organic materials generated from industries, kitchens, farms, markets and homes.</p>
+      <div class="btn-group">
+        <a href="#products" class="btn-primary"><i class="fas fa-seedling"></i> Explore portfolio</a>
+        <a href="#contact" class="btn-secondary"><i class="fas fa-chart-line"></i> Consult expert</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=600&fit=crop" alt="Healthy crop field - sustainable farming" loading="eager">
+    </div>
+  </div>
+</section>
+
+<!-- Products Portfolio (Core fertilizers) -->
+<section id="products" class="products">
+  <div class="container">
+    <h2 class="section-title">🌾 Fertilizer portfolio</h2>
+    <div class="section-sub">Science-based blends tailored for major crops, high efficiency, low environmental footprint.</div>
+    <div class="product-grid">
+      <!-- Product 1 -->
+      <div class="product-card">
+        <div class="product-icon"><i class="fas fa-tractor"></i></div>
+        <h3>NitroHumus Gold</h3>
+        <div class="nutrient-stats"><span>N 24%</span><span>P 12%</span><span>K 18%</span></div>
+        <p class="product-desc">Slow-release nitrogen with humic acids – boosts root mass and reduces leaching by 40%.</p>
+        <div class="product-tag"><i class="fas fa-check-circle"></i> Ideal for cereals & corn</div>
+      </div>
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div class="product-icon"><i class="fas fa-droplet"></i></div>
+        <h3>PhosBioBoost</h3>
+        <div class="nutrient-stats"><span>P₂O₅ 28%</span><span>+ Mycorrhizae</span><span>K 8%</span></div>
+        <p class="product-desc">Phosphorus solubilizing bio-fertilizer. Increases P availability, enhances flowering & fruit set.</p>
+        <div class="product-tag"><i class="fas fa-flower"></i> Legumes & fruit trees</div>
+      </div>
+      <!-- Product 3 -->
+      <div class="product-card">
+        <div class="product-icon"><i class="fas fa-apple-alt"></i></div>
+        <h3>Potassium Viva</h3>
+        <div class="nutrient-stats"><span>K₂O 32%</span><span>Mg 3%</span><span>+ Amino Acids</span></div>
+        <p class="product-desc">High-efficiency potassium complex with stress-reducing biostimulants for drought resilience.</p>
+        <div class="product-tag"><i class="fas fa-sun"></i> Vegetables & tubers</div>
+      </div>
+      <!-- Product 4 -->
+      <div class="product-card">
+        <div class="product-icon"><i class="fas fa-hand-holding-heart"></i></div>
+        <h3>TerraGuard Complete</h3>
+        <div class="nutrient-stats"><span>NPK 15-15-15</span><span>+Zn+B</span><span>Biochar</span></div>
+        <p class="product-desc">All-in-one balanced fertilizer with trace elements & carbon enrichment for soil health.</p>
+        <div class="product-tag"><i class="fas fa-globe-americas"></i> Multi-crop / regenerative</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features / Why TerraEcoGuard -->
+<section id="features" class="features">
+  <div class="container">
+    <h2 class="section-title">Engineering the future of fertility</h2>
+    <div class="section-sub">We blend agronomy, ecology, and cutting-edge biotech to redefinutritionne crop .</div>
+    <div class="features-grid">
+      <div class="feature-item"><i class="fas fa-microscope"></i><h4>Precision Bio-Chemistry</h4><p>Tailored nutrient release patterns matched to crop phenology, reducing waste and runoff.</p></div>
+      <div class="feature-item"><i class="fas fa-seedling"></i><h4>Carbon+ Soil Builder</h4><p>All formulas enriched with organic carbon & beneficial microbes to regenerate topsoil.</p></div>
+      <div class="feature-item"><i class="fas fa-chart-simple"></i><h4>Yield proven</h4><p>Field trials across West Africa show average +27% productivity with less fertilizer input.</p></div>
+      <div class="feature-item"><i class="fas fa-certificate"></i><h4>EcoCert & OMRI listed</h4><p>Globally certified for organic agriculture & climate-smart farming standards.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Impact stats -->
+<section class="impact">
+  <div class="container stats-wrapper">
+    <div class="stat"><h2>1.2M+</h2><p>Hectares enriched</p></div>
+    <div class="stat"><h2>38%</h2><p>Avg. N₂O emission cut</p></div>
+    <div class="stat"><h2>120+</h2><p>Specialized blends</p></div>
+    <div class="stat"><h2>100%</h2><p>Biodegradable coating</p></div>
+  </div>
+</section>
+
+<!-- Contact section with updated Ghana location & phone -->
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="contact-flex">
+      <div class="contact-left">
+        <h3><i class="fas fa-headset"></i> Partner with experts</h3>
+        <p style="margin-bottom: 24px;">Request personalized portfolio advice, agronomic trials, or bulk orders. Serving Ghana and beyond.</p>
+        <div class="contact-details">
+          <p><i class="fas fa-map-marker-alt"></i> The Eden Agronomist, Main Street, Darkuman, Greater Accra, Ghana</p>
+          <p><i class="fas fa-phone-alt"></i>020 418 5696</p>
+          <p><i class="fas fa-envelope"></i> edengreenagro@gmail.com</p>
+        </div>
+        <div style="margin-top: 30px;">
+          <i class="fab fa-linkedin" style="font-size: 28px; margin-right: 18px; color:#2C6E2C;"></i>
+          <i class="fab fa-twitter" style="font-size: 28px; margin-right: 18px; color:#2C6E2C;"></i>
+          <i class="fab fa-instagram" style="font-size: 28px; color:#2C6E2C;"></i>
+        </div>
+      </div>
+      <div class="contact-right">
+        <form action="#" method="post">
+          <div class="form-group"><input type="text" placeholder="Full name *" required></div>
+          <div class="form-group"><input type="email" placeholder="Email address *" required></div>
+          <div class="form-group"><input type="text" placeholder="Farm / Company / Location (Ghana)"></div>
+          <div class="form-group"><textarea rows="3" placeholder="Tell us about your crop needs..."></textarea></div>
+          <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> Request consultation</button>
+          <p style="font-size: 0.7rem; margin-top: 12px;">By submitting, you agree to our sustainable data policy.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-logo"><h3>TerraEcoGuard</h3><p style="margin-top: 6px;">regenerating soils, growing tomorrow – Ghana | Africa</p></div>
+      <div class="social">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-linkedin-in"></i>
+        <i class="fab fa-youtube"></i>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>© 2026 TerraEcoGuard — Professional agrofertilizer portfolio. Serving Awoshie, Ghana & West Africa. All rights reserved. | Designed for ecological impact</p>
+    </div>
+  </div>
+</footer>
+
+<!-- smooth scroll + active nav + contact alert -->
+<script>
+  (function() {
+    // smooth scroll for anchor links
+    const links = document.querySelectorAll('a[href^="#"]');
+    links.forEach(link => {
+      link.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === "#" || targetId === "") return;
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // update active state
+          document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+          if (this.classList.contains('btn-outline') === false && this.closest('.nav-links')) {
+            this.classList.add('active');
+          }
+        }
+      });
+    });
+    // active nav highlight based on scroll
+    const sections = document.querySelectorAll("section, .hero");
+    const navItems = document.querySelectorAll(".nav-links a");
+    window.addEventListener("scroll", () => {
+      let current = "";
+      const scrollPosition = window.scrollY + 150;
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          current = section.getAttribute("id");
+        }
+      });
+      navItems.forEach(link => {
+        link.classList.remove("active");
+        const href = link.getAttribute("href").substring(1);
+        if (href === current || (current === null && link.getAttribute("href") === "#")) {
+          if (link.getAttribute("href") === "#" && window.scrollY < 100) link.classList.add("active");
+          else if (href === current) link.classList.add("active");
+        }
+      });
+      if (window.scrollY < 80) document.querySelector(".nav-links a[href='#']")?.classList.add("active");
+    });
+    // form submission alert
+    const formBtn = document.querySelector('.btn-submit');
+    if (formBtn) {
+      formBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert('📬 Akwaaba! Thank you for reaching out. A TerraEcoGuard specialist from our Awoshie office will respond within 24h with tailored portfolio recommendations. Call us at +233 24 394 3938 for immediate assistance.');
+        const form = document.querySelector('.contact-right form');
+        if (form) form.reset();
+      });
+    }
+  })();
+</script>
+</body>
+</html>
